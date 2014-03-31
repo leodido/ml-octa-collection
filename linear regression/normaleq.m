@@ -1,42 +1,30 @@
-## Copyright (c) 2014 Leonardo Di Donato <leodidonato@gmail.com>
-## 
-## Redistribution and use in source and binary forms, with or without
-## modification, are permitted provided that the following conditions are met:
-## 
-## * Redistributions of source code must retain the above copyright notice, this
-##   list of conditions and the following disclaimer.
-## 
-## * Redistributions in binary form must reproduce the above copyright notice,
-##   this list of conditions and the following disclaimer in the documentation
-##   and/or other materials provided with the distribution.
-## 
-## THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-## AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-## IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-## ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-## LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-## CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
-## SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
-## INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-## CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
-## ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
-## POSSIBILITY OF SUCH DAMAGE.
-
-## usage: theta = normaleq (X, y)
-## 
-## Compute the closed-form solution to linear regression using normal equations.
-##
-## example:
-## X = [1 0; 0 2];
-## y = [1; 1];
-## theta = normaleq(X, y)
-##
-## author: leodido <leodidonato@gmail.com>
-##
-## keywords: normal equations, linear regression
-##
-## mantainer: leodido <leodidonato@gmail.com>
 function [theta] = normaleq(X, y)
+% -----------------------------------------------------------------------------
+% Usage: theta = normaleq (X, y)
+% -----------------------------------------------------------------------------
+% Parameters:
+% X     : double, size(m, n)
+% y     : double, size(m, 1)
+% -----------------------------------------------------------------------------
+% Return values:
+% theta : double, size(n, 1)
+% ----------------------------------------------------------------------------- 
+% Compute the closed-form solution to linear regression
+% using normal equations.
+% Perform the pseudo-inverse function to bypass the inversion of
+% non-invertible matrices.
+% -----------------------------------------------------------------------------
+% Keywords: normal equations, linear regression
+% -----------------------------------------------------------------------------
+% Examples:
+% X = [1 0; 0 2];
+% y = [1; 1];
+% theta = normaleq(X, y)
+% -----------------------------------------------------------------------------
+% Author: leodido <leodidonato@gmail.com>
+% -----------------------------------------------------------------------------
+% Mantainer: leodido <leodidonato@gmail.com>
+% -----------------------------------------------------------------------------
     theta = pinv(X' * X) * X' * y;
 end
 
