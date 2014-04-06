@@ -2,6 +2,10 @@
 %!test scale_matrix();
 %!test scale_square_matrix();
 %!test scale_equals();
+%!test hydist_1();
 %!test jcost_1();
 %!test jcost_2();
 %!test jcost_3();
+%!test gdescent_1();
+%!test gdescent_2();
+%!test gdescent_3();
