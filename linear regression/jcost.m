@@ -26,7 +26,7 @@ function j = jcost (X, y, theta)
 % -----------------------------------------------------------------------------
 % Mantainer: leodido <leodidonato@gmail.com>
 % -----------------------------------------------------------------------------
-    term = (X * theta) .- y;					% hypothesis - y
-    j = 1 / (2 * size(X, 1)) * term' * term;
+    dist = (X * theta) .- y;					% hypothesis - y
+    j = (dist' * dist) / (2 * size(X, 1));
 end
 
