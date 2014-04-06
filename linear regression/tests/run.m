@@ -9,3 +9,5 @@
 %!test gdescent_1();
 %!test gdescent_2();
 %!test gdescent_3();
+%!test normaleq_1();
+%!test normaleq_2();
