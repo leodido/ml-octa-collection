@@ -3,7 +3,7 @@ What is this? [![Analytics](https://ga-beacon.appspot.com/UA-49657176-1/ml-octa-
 
 This repository contains some GNU/Octave functions for machine learning.
 
-## Example usage
+## Instructions
 
 If you want to use the linear regression code you can simply execute:
 
