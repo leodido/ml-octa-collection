@@ -30,10 +30,9 @@ function [theta, jhist] = gdescent(X, y, theta, alpha, it)
 % -----------------------------------------------------------------------------
 % Mantainer: leodido <leodidonato@gmail.com>
 % -----------------------------------------------------------------------------
-    m = size(X, 1);                                 % num of training examples
     jhist = zeros(it, 1);
     for iter = 1:it
-        theta = theta .- alpha * 1 / m * X' * ((X * theta) .- y);  
+        theta = theta .- alpha * 1 / size(X, 1) * X' * ((X * theta) .- y);   % .- size(X, 1) * X' * ((X * theta) .- y) / alpha ?
         jhist(iter, 1) = jcost(X, y, theta);        % save the cost j
     end
 end
