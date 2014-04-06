@@ -11,13 +11,13 @@ If you want to use the linear regression code you can simply execute:
 addpath(genpath('path/to/linear regression'));
 ```
 
-Done. You can now use the linear regression functions but also run test cases executing `test run` in order to check that everything works fine.
+Done. You can now use the linear regression functions but also run test cases in order to check that everything works just fine:
 
 ```matlab
-test run
+test('run')
 ```
 
-Infact, this command will execute the ["run.m"](run.md) file (see  ["linear regression/tests"]() directory).
+This command will execute the [run.m](linear regression/tests/run.m) file in the [linear regression/tests](linear regression/tests/) directory.
 
 Also, you can run demos ...
 
@@ -25,6 +25,6 @@ _TODO_
 
 ## Copyright and license
 
-The functions are released under the terms of the [BSD-2 license](LICENSE).
+The code is released under the terms of the [BSD-2 license](LICENSE).
 
 Copyright (c) 2014 - [Leonardo Di Donato](www.github.com/leodido).
